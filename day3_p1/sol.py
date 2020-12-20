@@ -1,4 +1,4 @@
-# https://adventofcode.com/2020/day/2
+# https://adventofcode.com/2020/day/3
 if __name__ == "__main__":
     slope = []
     with open('./input.txt', 'r') as f:
