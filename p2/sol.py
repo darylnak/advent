@@ -7,11 +7,14 @@ if __name__ == "__main__":
         for line in lines:
             nums[int(line)] = int(line)
 
+    stop = False
     for num in nums:
         check = target - num
-        if check in nums:
-            for num2 in nums:
-                check2 = check - num2
-                if check2 in nums:
-                    print("{} * {} * {}= {}".format(check, check2, num2, num2*check*check2))
-                    break
+        for num2 in nums:
+            check2 = check - num2
+            if check2 in nums:
+                print("{} * {} * {}= {}".format(num, check2, num2, num2*num*check2))
+                stop = True
+                break
+        if stop:
+            break
