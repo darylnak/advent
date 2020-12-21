@@ -12,7 +12,7 @@ if __name__ == "__main__":
         line = re.sub(r'\n', r' ', line)
         t = line.split(" ")
 
-        # check x != '' since the last line in the file is a single '\n'
+        # check if x != '' since the last line in the file is a single '\n'
         curr = [x[:x.index(':')] for x in t if x != '' and x[:x.index(':')] != "cid"]
         if len(curr) == len(valid):
             num_valid += 1
